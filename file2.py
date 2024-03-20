@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 #import neptune
 #from neptune.types import File
 import os
-
+import matplotlib as plt
 lr = LinearRegression()
 # #############################################################################
 # Load and split data
@@ -26,7 +26,7 @@ for _ in range(100):
     
     # Write metrics to file
 with open('metrics.txt', 'w') as outfile:
-        outfile.write(f'\n Mean Squared Error = {average_mse}.')
+    outfile.write(f'\n Mean Squared Error = {average_mse}.')
 
 print(f'MSE Result: { test_mse}')
-    print("Average Mean Squared Error:", average_mse)
+print("Average Mean Squared Error:", average_mse)
