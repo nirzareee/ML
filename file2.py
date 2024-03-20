@@ -23,9 +23,10 @@ for _ in range(100):
     lr.fit(X_train, y_train)
     test_mse = mean_squared_error(y_test, lr.predict(X_test))
     average_mse = np.mean(test_mse)
-    print(f'MSE Result: { test_mse}')
-    print("Average Mean Squared Error:", average_mse)
+    
     # Write metrics to file
-    with open('metrics.txt', 'w') as outfile:
+with open('metrics.txt', 'w') as outfile:
         outfile.write(f'\n Mean Squared Error = {average_mse}.')
 
+print(f'MSE Result: { test_mse}')
+    print("Average Mean Squared Error:", average_mse)
